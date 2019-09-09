@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+}
+marquee{
+    color: magenta;
+    font-family: Impact;
+}
+.sub{
+    color: white;
+    font-style: italic;
+    font-family: 'Segoe UI'; 
+    font-size: 40px;
+    text-align: center;
+    background-image: url(https://st.depositphotos.com/2788513/3950/i/450/depositphotos_39502673-stock-photo-rainbow-colors-created-by-soap.jpg);
+}
+.sub2{
+    color:white;
+    font-style: italic;
+    font-family: 'Segoe UI';
+    font-size: 60px;
+    text-align: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5lQxXR0t2mmAs9DQPNuh9MyLti2C1FuyeZuigjPDbV3_1ShQ);
+}
+
+.gatasso{
+    margin: 20px;
+    display: inline;
+}
+
+.jorge {
+    opacity: 0;
+    -webkit-transition: all ease-in-out .5s;
+    -o-transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s;
+}
+
+.jorge:hover {
+    opacity: 1;
+}
