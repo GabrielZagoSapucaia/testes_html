@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Quantos são os postos e qual a distância intermediária máxima do atleta?</label>
+        <input id="ped" type="text">
+    </div>
+    <div>
+        <label for="">Qual a posição dos postos?</label>
+        <input id="pdp" type="text">
+    </div>
+
+    <button id="btn">Analisar!</button>
+
+    <script>
+
+        var ped = document.getElementById("ped");
+        var pdp = document.getElementById("pdp");
+        var btn = document.getElementById("btn");
+
+        
+        function btnClick(){
+        
+            var pedSplit = (ped.value).split(" ");
+            var pdpSplit = (pdp.value).split(" ");
+            
+            var quantPostos = pedSplit[0];
+            var distancia = pedSplit[1];
+            var i=1;
+
+            while (quantPostos!=1){
+                
+                if(pdpSplit[i]-pdpSplit[i-1]>distancia){
+                    alert("N");
+                }
+            i+=1;
+            quantPostos-=1;
+            }
+            if(42195-pdpSplit[pdpSplit.lenght]>distancia){
+                alert("N");
+            }
+            else{
+                alert("S")
+            }
+        }
+
+        btn.onclick = btnClick();
+    </script>
+</body>
+</html>
