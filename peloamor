@@ -9,48 +9,48 @@
 <body>
     <div>
         <label for="">Quantos são os postos e qual a distância intermediária máxima do atleta?</label>
-        <input id="ped" type="text">
+        <input id="ParadasDistancia" type="text">
     </div>
     <div>
         <label for="">Qual a posição dos postos?</label>
-        <input id="pdp" type="text">
+        <input id="Postos" type="text">
     </div>
 
     <button id="btn">Analisar!</button>
 
     <script>
 
-        var ped = document.getElementById("ped");
-        var pdp = document.getElementById("pdp");
+        var ParadasDistancia = document.getElementById("ParadasDistancia");
+        var Postos = document.getElementById("Postos");
         var btn = document.getElementById("btn");
 
         
-        function btnClick(){
+        btn.onclick=function btnClick(){
         
-            var pedSplit = (ped.value).split(" ");
-            var pdpSplit = (pdp.value).split(" ");
+            var ArrayPD = (ParadasDistancia.value).split(" ");
+            var ArrayPostos = (Postos.value).split(" ");
             
-            var quantPostos = pedSplit[0];
-            var distancia = pedSplit[1];
-            var i=1;
+            var quantPostos = ArrayPD[0];
+            var distanciaMax = ArrayPD[1];
+            var ultimoPosto = ArrayPD[0]-1;            
+            var loopVali = ultimoPosto;
+            var posicaoPosto=1;
 
-            while (quantPostos!=1){
-                
-                if(pdpSplit[i]-pdpSplit[i-1]>distancia){
-                    alert("N");
+            while(loopVali!=0){
+
+                if(ArrayPostos[posicaoPosto]-ArrayPostos[posicaoPosto-1]>distanciaMax){
+                    alert("N")
                 }
-            i+=1;
-            quantPostos-=1;
+                loopVali-=1;
             }
-            if(42195-pdpSplit[pdpSplit.lenght]>distancia){
+            if(42195-ArrayPostos[ultimoPosto]>distanciaMax){
                 alert("N");
             }
             else{
                 alert("S")
             }
+        
         }
-
-        btn.onclick = btnClick();
     </script>
 </body>
 </html>
